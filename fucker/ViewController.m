@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "MBProgressHUD.h"
+#import "Toast.h"
 
 @interface ViewController ()
 
@@ -16,6 +18,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    
+    
+    
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        });
+    });
+
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -29,4 +43,10 @@
     
 }
 
+- (IBAction)buttonClick:(id)sender {
+    
+    //[Utils showTips:self.view :@"我靠"];
+    [Toast showProgressDialog:self.view];
+    
+}
 @end
