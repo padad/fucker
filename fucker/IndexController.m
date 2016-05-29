@@ -9,6 +9,7 @@
 #import "IndexController.h"
 #import "MessageTableViewController.h"
 #import "UrlUtil.h"
+#import "HRApi.h"
 
 @interface IndexController ()
 
@@ -78,7 +79,7 @@
 
 - (IBAction)leftClick:(id)sender {
     
-    NSString *url = [UrlUtil getServiceUrl:toLogin];
+    
     
     
     MessageTableViewController *ms = [[MessageTableViewController alloc] init];
@@ -86,7 +87,10 @@
     ms.hidesBottomBarWhenPushed = YES;
     
     ms.messageValueBlock = ^(NSString *message){
-        [Toast showTips:self.view :message];
+        //[Toast showTips:self.view :message];
+        
+        [HRApi login:@"ss" : @"sd"];
+        
     };
     
     [self.navigationController pushViewController:ms animated:YES];
