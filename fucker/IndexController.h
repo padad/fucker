@@ -8,14 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IndexController : UIViewController
-@property (strong, nonatomic) IBOutlet UINavigationBar *navigationItem;
+@interface IndexController : BaseViewController
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *leftButton;
 
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *rightButton;
 
 - (IBAction)leftClick:(id)sender;
 
-- (IBAction)rightButton:(id)sender;
+- (IBAction)rightClick:(id)sender;
 
 @end

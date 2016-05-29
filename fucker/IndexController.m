@@ -7,6 +7,7 @@
 //
 
 #import "IndexController.h"
+#import "MessageTableViewController.h"
 
 @interface IndexController ()
 
@@ -15,7 +16,12 @@
 @implementation IndexController
 
 - (void)viewDidLoad {
+    
+    
+    
     [super viewDidLoad];
+    
+    
     
     //self.leftButton.title = @"我靠";
     
@@ -26,10 +32,21 @@
     // Do any additional setup after loading the view.
 }
 
+- (void) viewDidAppear:(BOOL)animated{
+    
+    [super viewDidAppear:animated];
+    //self.scrollView.contentSize = CGSizeMake(320, CGRectGetMaxY(self.btnBottom.frame)+10);
+    
+    
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+    
     // Dispose of any resources that can be recreated.
 }
+
+
 
 /*
 #pragma mark - Navigation
@@ -42,13 +59,32 @@
 */
 
 
+//- (IBAction)leftClick:(id)sender {
+//    
+//    //[Toast showTips:self.view :@"left"];
+//    MessageTableViewController *ms = [[MessageTableViewController alloc] init];
+//    [self.navigationItem pushViewController:ms animated:YES];
+//    
+//}
+//
+//- (IBAction)rightButton:(id)sender {
+//    
+//    [Toast showTips:self.view :@"right"];
+//    
+//}
+
+
+
 - (IBAction)leftClick:(id)sender {
-    [Toast showTips:self.view :@"left"];
+    
+    MessageTableViewController *ms = [[MessageTableViewController alloc] init];
+    ms.textString = @"我靠";
+    ms.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:ms animated:YES];
+//    [self.navigationController pushViewController:ms animated:YES];
+    
 }
 
-- (IBAction)rightButton:(id)sender {
-    
-    [Toast showTips:self.view :@"right"];
-    
+- (IBAction)rightClick:(id)sender {
 }
 @end

@@ -16,5 +16,6 @@
 #import <UIKit/UIKit.h>
 #import "MBProgressHUD.h"
 #import "Toast.h"
+#import "BaseViewController.h"
 
 #endif /* PrefixHeader_pch */
