@@ -18,6 +18,8 @@
 		989C7E121CF9F5AF00B1D679 /* IndexController.m in Sources */ = {isa = PBXBuildFile; fileRef = 989C7E111CF9F5AF00B1D679 /* IndexController.m */; };
 		989C7E161CFAF8EE00B1D679 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 989C7E151CFAF8EE00B1D679 /* BaseViewController.m */; };
 		989C7E1A1CFB1D9600B1D679 /* MessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 989C7E191CFB1D9600B1D679 /* MessageTableViewController.m */; };
+		989C7E1D1CFB447800B1D679 /* UrlUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 989C7E1C1CFB447800B1D679 /* UrlUtil.m */; };
+		989C7E271CFB4AB800B1D679 /* AppConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 989C7E261CFB4AB800B1D679 /* AppConfig.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,11 @@
 		989C7E151CFAF8EE00B1D679 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		989C7E181CFB1D9600B1D679 /* MessageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTableViewController.h; sourceTree = "<group>"; };
 		989C7E191CFB1D9600B1D679 /* MessageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTableViewController.m; sourceTree = "<group>"; };
+		989C7E1B1CFB447800B1D679 /* UrlUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UrlUtil.h; sourceTree = "<group>"; };
+		989C7E1C1CFB447800B1D679 /* UrlUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UrlUtil.m; sourceTree = "<group>"; };
+		989C7E241CFB4A6D00B1D679 /* macrodef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = macrodef.h; sourceTree = "<group>"; };
+		989C7E251CFB4AB800B1D679 /* AppConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConfig.h; sourceTree = "<group>"; };
+		989C7E261CFB4AB800B1D679 /* AppConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConfig.m; sourceTree = "<group>"; };
 		FBE0E259EA968446179A172E /* Pods-fucker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fucker.release.xcconfig"; path = "Pods/Target Support Files/Pods-fucker/Pods-fucker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +94,7 @@
 		849D4A191CF8555D00436BDA /* fucker */ = {
 			isa = PBXGroup;
 			children = (
+				989C7E1E1CFB459400B1D679 /* config */,
 				989C7E171CFB1D6100B1D679 /* ui */,
 				989C7E131CFA92FA00B1D679 /* BaseView */,
 				989C7E0B1CF9D76A00B1D679 /* Util */,
@@ -119,6 +127,8 @@
 			children = (
 				989C7E0C1CF9D9A700B1D679 /* Toast.h */,
 				989C7E0D1CF9D9A700B1D679 /* Toast.m */,
+				989C7E1B1CFB447800B1D679 /* UrlUtil.h */,
+				989C7E1C1CFB447800B1D679 /* UrlUtil.m */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -139,6 +149,16 @@
 				989C7E191CFB1D9600B1D679 /* MessageTableViewController.m */,
 			);
 			name = ui;
+			sourceTree = "<group>";
+		};
+		989C7E1E1CFB459400B1D679 /* config */ = {
+			isa = PBXGroup;
+			children = (
+				989C7E241CFB4A6D00B1D679 /* macrodef.h */,
+				989C7E251CFB4AB800B1D679 /* AppConfig.h */,
+				989C7E261CFB4AB800B1D679 /* AppConfig.m */,
+			);
+			name = config;
 			sourceTree = "<group>";
 		};
 		D244A154D3B02240D6563FAD /* Frameworks */ = {
@@ -276,8 +296,10 @@
 				989C7E161CFAF8EE00B1D679 /* BaseViewController.m in Sources */,
 				989C7E121CF9F5AF00B1D679 /* IndexController.m in Sources */,
 				849D4A1F1CF8555D00436BDA /* AppDelegate.m in Sources */,
+				989C7E1D1CFB447800B1D679 /* UrlUtil.m in Sources */,
 				849D4A1C1CF8555D00436BDA /* main.m in Sources */,
 				989C7E0E1CF9D9A700B1D679 /* Toast.m in Sources */,
+				989C7E271CFB4AB800B1D679 /* AppConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

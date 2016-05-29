@@ -17,5 +17,7 @@
 #import "MBProgressHUD.h"
 #import "Toast.h"
 #import "BaseViewController.h"
+#import "macrodef.h"
+#import "AppConfig.h"
 
 #endif /* PrefixHeader_pch */

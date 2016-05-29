@@ -8,6 +8,7 @@
 
 #import "IndexController.h"
 #import "MessageTableViewController.h"
+#import "UrlUtil.h"
 
 @interface IndexController ()
 
@@ -77,9 +78,17 @@
 
 - (IBAction)leftClick:(id)sender {
     
+    NSString *url = [UrlUtil getServiceUrl:toLogin];
+    
+    
     MessageTableViewController *ms = [[MessageTableViewController alloc] init];
     ms.textString = @"我靠";
     ms.hidesBottomBarWhenPushed = YES;
+    
+    ms.messageValueBlock = ^(NSString *message){
+        [Toast showTips:self.view :message];
+    };
+    
     [self.navigationController pushViewController:ms animated:YES];
 //    [self.navigationController pushViewController:ms animated:YES];
     

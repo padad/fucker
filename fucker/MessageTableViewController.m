@@ -29,6 +29,12 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+- (void) viewWillDisappear:(BOOL)animated{
+    
+    self.messageValueBlock(@"sd");
+    
+}
+
 - (void)viewDidAppear:(BOOL)animated{
     
     [super viewDidAppear:animated];

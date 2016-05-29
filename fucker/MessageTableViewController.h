@@ -8,8 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void (^MessageValueBlock)(NSString *);
+
 @interface MessageTableViewController : UITableViewController
 
 @property (nonatomic,copy) NSString *textString;
+
+@property (nonatomic,copy)MessageValueBlock messageValueBlock;
+
+
+
 
 @end
