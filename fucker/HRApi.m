@@ -7,31 +7,23 @@
 //
 
 #import "HRApi.h"
-#import <AFNetworking/AFNetworking.h>
 #import "UrlUtil.h"
+#import "NetUtil.h"
 
 @implementation HRApi
 
-+ (void) login:(NSString *)userName :(NSString *)pass{
++ (void) login: (UIView *)mthis :(NSString *)userName :(NSString *)pass{
     
     NSString *url = [UrlUtil getServiceUrl:toLogin];
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    //[params setValue:<#(nullable id)#> forKeyPath:<#(nonnull NSString *)#>]
     
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    [params setValue:userName forKey:@"account"];
+    [params setValue:pass forKey:@"password"];
     
-    [manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-        
-    }
-         success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-             
-             NSLog(@"这里打印请求成功要做的事");
-             
-         }
-     
-         failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull   error) {
-             
-             NSLog(@"%@",error);  //这里打印错误信息
-             
-         }];
+    [NetUtil getBin:mthis :url :params :SYSTEM_LOADING :0];
+    
+    
     
     
     

@@ -10,9 +10,9 @@
 
 
 const static NSString *test_main_serve_url          =
-@"http://www.baidu.com";     // 测试服务器测试地址 192.168.1.47
+@"http://zzhuanle.kjtpay.com/zhuanle";     // 测试服务器测试地址 192.168.1.47
 const static NSString *form_main_serve_url          =
-@"https://www.baidu.com";     // 正式服务器地址
+@"https://zhuanle.kjtpay.com/zhuanle";     // 正式服务器地址
 
 
 @implementation AppConfig

@@ -10,6 +10,6 @@
 
 @interface HRApi : NSObject
 
-+ (void) login : (NSString *)userName : (NSString *)pass;
++ (void) login : (UIView *)mthis : (NSString *)userName : (NSString *)pass;
 
 @end

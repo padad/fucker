@@ -10,7 +10,25 @@
 #define macrodef_h
 
 
-#define ISDEBUG NO
+
+
+
+
+#define ISDEBUG YES
+
+#define SYSTEM_LOADING 0
+#define PAGE_LOADING 1
+#define NO_LOADING 2
+
+/* 用户Auth */
+#define USER_AUTH       [UserData getAuth]
+
+/* API版本 */
+#define API_VERSION     @"2.0"      //API版本号
+
+///* 生产环境配置 */
+#define CHANNEL_ID  @"apple_normal"                 //AppStore渠道标识
+
 
 
 #define toLogin @"/toLogin"

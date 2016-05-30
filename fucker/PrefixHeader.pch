@@ -19,5 +19,6 @@
 #import "BaseViewController.h"
 #import "macrodef.h"
 #import "AppConfig.h"
+#import "StringUtil.h"
 
 #endif /* PrefixHeader_pch */

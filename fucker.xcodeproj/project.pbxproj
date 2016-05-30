@@ -7,13 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		424CCC699608CEDE50207D1A /* Pods_fucker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E592BB082DB4012A016BF9B /* Pods_fucker.framework */; };
 		849D4A1C1CF8555D00436BDA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D4A1B1CF8555D00436BDA /* main.m */; };
 		849D4A1F1CF8555D00436BDA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D4A1E1CF8555D00436BDA /* AppDelegate.m */; };
 		849D4A221CF8555D00436BDA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D4A211CF8555D00436BDA /* ViewController.m */; };
 		849D4A251CF8555D00436BDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849D4A231CF8555D00436BDA /* Main.storyboard */; };
 		849D4A271CF8555D00436BDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849D4A261CF8555D00436BDA /* Assets.xcassets */; };
 		849D4A2A1CF8555D00436BDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849D4A281CF8555D00436BDA /* LaunchScreen.storyboard */; };
+		849D4DBB1CFBE3AE00436BDA /* NetUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D4DBA1CFBE3AE00436BDA /* NetUtil.m */; };
+		849D4DC21CFBED2B00436BDA /* GetBinAsyncTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D4DC11CFBED2B00436BDA /* GetBinAsyncTask.m */; };
+		849D4DC51CFC25F200436BDA /* StringUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D4DC41CFC25F200436BDA /* StringUtil.m */; };
+		849D4DC81CFC267A00436BDA /* UserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D4DC71CFC267A00436BDA /* UserData.m */; };
+		849D4DCC1CFC289600436BDA /* HCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D4DCB1CFC289600436BDA /* HCoreData.m */; };
+		849D4DCF1CFC2FEA00436BDA /* HDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D4DCE1CFC2FEA00436BDA /* HDBManager.m */; };
+		849D4DD21CFC348900436BDA /* HDBUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D4DD11CFC348900436BDA /* HDBUtil.m */; };
+		849D4DD61CFC353F00436BDA /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D4DD51CFC353F00436BDA /* UserModel.m */; };
+		849D4DD91CFC378500436BDA /* HDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D4DD81CFC378500436BDA /* HDevice.m */; };
+		849D4DDE1CFC390500436BDA /* GLReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D4DDD1CFC390500436BDA /* GLReachability.m */; };
+		849D4DE11CFC392D00436BDA /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D4DE01CFC392D00436BDA /* Reachability.m */; };
+		849D4DE41CFC3B8D00436BDA /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D4DE31CFC3B8D00436BDA /* KeychainItemWrapper.m */; };
+		849D4DE71CFC426000436BDA /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 849D4DE51CFC426000436BDA /* DataModel.xcdatamodeld */; };
 		989C7E0E1CF9D9A700B1D679 /* Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 989C7E0D1CF9D9A700B1D679 /* Toast.m */; };
 		989C7E121CF9F5AF00B1D679 /* IndexController.m in Sources */ = {isa = PBXBuildFile; fileRef = 989C7E111CF9F5AF00B1D679 /* IndexController.m */; };
 		989C7E161CFAF8EE00B1D679 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 989C7E151CFAF8EE00B1D679 /* BaseViewController.m */; };
@@ -21,10 +33,10 @@
 		989C7E1D1CFB447800B1D679 /* UrlUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 989C7E1C1CFB447800B1D679 /* UrlUtil.m */; };
 		989C7E271CFB4AB800B1D679 /* AppConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 989C7E261CFB4AB800B1D679 /* AppConfig.m */; };
 		989C7E2B1CFB530A00B1D679 /* HRApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 989C7E2A1CFB530A00B1D679 /* HRApi.m */; };
+		D1EA3513B73BA6621C47546A /* libPods-fucker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAEAFD6F676B4755E637A9D /* libPods-fucker.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3E592BB082DB4012A016BF9B /* Pods_fucker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fucker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E1B66BAA4F571E2FC1EBCF7 /* Pods-fucker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fucker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fucker/Pods-fucker.debug.xcconfig"; sourceTree = "<group>"; };
 		849D4A171CF8555D00436BDA /* fucker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fucker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		849D4A1B1CF8555D00436BDA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -36,6 +48,31 @@
 		849D4A261CF8555D00436BDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		849D4A291CF8555D00436BDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		849D4A2B1CF8555D00436BDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		849D4DB91CFBE3AE00436BDA /* NetUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetUtil.h; sourceTree = "<group>"; };
+		849D4DBA1CFBE3AE00436BDA /* NetUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetUtil.m; sourceTree = "<group>"; };
+		849D4DC01CFBED2B00436BDA /* GetBinAsyncTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetBinAsyncTask.h; sourceTree = "<group>"; };
+		849D4DC11CFBED2B00436BDA /* GetBinAsyncTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetBinAsyncTask.m; sourceTree = "<group>"; };
+		849D4DC31CFC25F200436BDA /* StringUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StringUtil.h; path = Util/StringUtil.h; sourceTree = "<group>"; };
+		849D4DC41CFC25F200436BDA /* StringUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StringUtil.m; path = Util/StringUtil.m; sourceTree = "<group>"; };
+		849D4DC61CFC267A00436BDA /* UserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserData.h; path = datacenter/UserData.h; sourceTree = "<group>"; };
+		849D4DC71CFC267A00436BDA /* UserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserData.m; path = datacenter/UserData.m; sourceTree = "<group>"; };
+		849D4DCA1CFC289600436BDA /* HCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HCoreData.h; path = HDatabase/HCoreData.h; sourceTree = "<group>"; };
+		849D4DCB1CFC289600436BDA /* HCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HCoreData.m; path = HDatabase/HCoreData.m; sourceTree = "<group>"; };
+		849D4DCD1CFC2FEA00436BDA /* HDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HDBManager.h; path = HDatabase/HDBManager.h; sourceTree = "<group>"; };
+		849D4DCE1CFC2FEA00436BDA /* HDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HDBManager.m; path = HDatabase/HDBManager.m; sourceTree = "<group>"; };
+		849D4DD01CFC348900436BDA /* HDBUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HDBUtil.h; path = HDatabase/HDBUtil.h; sourceTree = "<group>"; };
+		849D4DD11CFC348900436BDA /* HDBUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HDBUtil.m; path = HDatabase/HDBUtil.m; sourceTree = "<group>"; };
+		849D4DD41CFC353F00436BDA /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserModel.h; path = Model/UserModel.h; sourceTree = "<group>"; };
+		849D4DD51CFC353F00436BDA /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserModel.m; path = Model/UserModel.m; sourceTree = "<group>"; };
+		849D4DD71CFC378500436BDA /* HDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HDevice.h; path = Util/HDevice.h; sourceTree = "<group>"; };
+		849D4DD81CFC378500436BDA /* HDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HDevice.m; path = Util/HDevice.m; sourceTree = "<group>"; };
+		849D4DDC1CFC390500436BDA /* GLReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLReachability.h; path = HReachability/GLReachability.h; sourceTree = "<group>"; };
+		849D4DDD1CFC390500436BDA /* GLReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLReachability.m; path = HReachability/GLReachability.m; sourceTree = "<group>"; };
+		849D4DDF1CFC392D00436BDA /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = HReachability/Reachability.h; sourceTree = "<group>"; };
+		849D4DE01CFC392D00436BDA /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = HReachability/Reachability.m; sourceTree = "<group>"; };
+		849D4DE21CFC3B8D00436BDA /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeychainItemWrapper.h; path = HReachability/KeychainItemWrapper.h; sourceTree = "<group>"; };
+		849D4DE31CFC3B8D00436BDA /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KeychainItemWrapper.m; path = HReachability/KeychainItemWrapper.m; sourceTree = "<group>"; };
+		849D4DE61CFC426000436BDA /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		989C7E0C1CF9D9A700B1D679 /* Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Toast.h; sourceTree = "<group>"; };
 		989C7E0D1CF9D9A700B1D679 /* Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Toast.m; sourceTree = "<group>"; };
 		989C7E0F1CF9E2A800B1D679 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -52,6 +89,7 @@
 		989C7E261CFB4AB800B1D679 /* AppConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConfig.m; sourceTree = "<group>"; };
 		989C7E291CFB530A00B1D679 /* HRApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRApi.h; sourceTree = "<group>"; };
 		989C7E2A1CFB530A00B1D679 /* HRApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRApi.m; sourceTree = "<group>"; };
+		ECAEAFD6F676B4755E637A9D /* libPods-fucker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-fucker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBE0E259EA968446179A172E /* Pods-fucker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fucker.release.xcconfig"; path = "Pods/Target Support Files/Pods-fucker/Pods-fucker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				424CCC699608CEDE50207D1A /* Pods_fucker.framework in Frameworks */,
+				D1EA3513B73BA6621C47546A /* libPods-fucker.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +135,10 @@
 		849D4A191CF8555D00436BDA /* fucker */ = {
 			isa = PBXGroup;
 			children = (
+				849D4DDA1CFC38B800436BDA /* New Group */,
+				849D4DD31CFC352800436BDA /* Model */,
+				849D4DC91CFC282F00436BDA /* HDatabase */,
+				849D4DBF1CFBE80600436BDA /* datacenter */,
 				989C7E281CFB52A800B1D679 /* Net */,
 				989C7E1E1CFB459400B1D679 /* config */,
 				989C7E171CFB1D6100B1D679 /* ui */,
@@ -126,13 +168,70 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		849D4DBF1CFBE80600436BDA /* datacenter */ = {
+			isa = PBXGroup;
+			children = (
+				849D4DC61CFC267A00436BDA /* UserData.h */,
+				849D4DC71CFC267A00436BDA /* UserData.m */,
+			);
+			name = datacenter;
+			sourceTree = "<group>";
+		};
+		849D4DC91CFC282F00436BDA /* HDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				849D4DCA1CFC289600436BDA /* HCoreData.h */,
+				849D4DCB1CFC289600436BDA /* HCoreData.m */,
+				849D4DCD1CFC2FEA00436BDA /* HDBManager.h */,
+				849D4DCE1CFC2FEA00436BDA /* HDBManager.m */,
+				849D4DD01CFC348900436BDA /* HDBUtil.h */,
+				849D4DD11CFC348900436BDA /* HDBUtil.m */,
+				849D4DE51CFC426000436BDA /* DataModel.xcdatamodeld */,
+			);
+			name = HDatabase;
+			sourceTree = "<group>";
+		};
+		849D4DD31CFC352800436BDA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				849D4DD41CFC353F00436BDA /* UserModel.h */,
+				849D4DD51CFC353F00436BDA /* UserModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		849D4DDA1CFC38B800436BDA /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		849D4DDB1CFC38D100436BDA /* HReachability */ = {
+			isa = PBXGroup;
+			children = (
+				849D4DDC1CFC390500436BDA /* GLReachability.h */,
+				849D4DDD1CFC390500436BDA /* GLReachability.m */,
+				849D4DDF1CFC392D00436BDA /* Reachability.h */,
+				849D4DE01CFC392D00436BDA /* Reachability.m */,
+				849D4DE21CFC3B8D00436BDA /* KeychainItemWrapper.h */,
+				849D4DE31CFC3B8D00436BDA /* KeychainItemWrapper.m */,
+			);
+			name = HReachability;
+			sourceTree = "<group>";
+		};
 		989C7E0B1CF9D76A00B1D679 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				849D4DDB1CFC38D100436BDA /* HReachability */,
 				989C7E0C1CF9D9A700B1D679 /* Toast.h */,
 				989C7E0D1CF9D9A700B1D679 /* Toast.m */,
 				989C7E1B1CFB447800B1D679 /* UrlUtil.h */,
 				989C7E1C1CFB447800B1D679 /* UrlUtil.m */,
+				849D4DC31CFC25F200436BDA /* StringUtil.h */,
+				849D4DC41CFC25F200436BDA /* StringUtil.m */,
+				849D4DD71CFC378500436BDA /* HDevice.h */,
+				849D4DD81CFC378500436BDA /* HDevice.m */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -170,6 +269,10 @@
 			children = (
 				989C7E291CFB530A00B1D679 /* HRApi.h */,
 				989C7E2A1CFB530A00B1D679 /* HRApi.m */,
+				849D4DB91CFBE3AE00436BDA /* NetUtil.h */,
+				849D4DBA1CFBE3AE00436BDA /* NetUtil.m */,
+				849D4DC01CFBED2B00436BDA /* GetBinAsyncTask.h */,
+				849D4DC11CFBED2B00436BDA /* GetBinAsyncTask.m */,
 			);
 			name = Net;
 			sourceTree = "<group>";
@@ -177,7 +280,7 @@
 		D244A154D3B02240D6563FAD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3E592BB082DB4012A016BF9B /* Pods_fucker.framework */,
+				ECAEAFD6F676B4755E637A9D /* libPods-fucker.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -304,15 +407,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				849D4DCF1CFC2FEA00436BDA /* HDBManager.m in Sources */,
+				849D4DD91CFC378500436BDA /* HDevice.m in Sources */,
+				849D4DBB1CFBE3AE00436BDA /* NetUtil.m in Sources */,
 				849D4A221CF8555D00436BDA /* ViewController.m in Sources */,
+				849D4DC81CFC267A00436BDA /* UserData.m in Sources */,
 				989C7E1A1CFB1D9600B1D679 /* MessageTableViewController.m in Sources */,
+				849D4DE41CFC3B8D00436BDA /* KeychainItemWrapper.m in Sources */,
+				849D4DC51CFC25F200436BDA /* StringUtil.m in Sources */,
 				989C7E161CFAF8EE00B1D679 /* BaseViewController.m in Sources */,
+				849D4DE71CFC426000436BDA /* DataModel.xcdatamodeld in Sources */,
+				849D4DD21CFC348900436BDA /* HDBUtil.m in Sources */,
+				849D4DD61CFC353F00436BDA /* UserModel.m in Sources */,
+				849D4DE11CFC392D00436BDA /* Reachability.m in Sources */,
 				989C7E121CF9F5AF00B1D679 /* IndexController.m in Sources */,
+				849D4DCC1CFC289600436BDA /* HCoreData.m in Sources */,
 				849D4A1F1CF8555D00436BDA /* AppDelegate.m in Sources */,
 				989C7E1D1CFB447800B1D679 /* UrlUtil.m in Sources */,
 				989C7E2B1CFB530A00B1D679 /* HRApi.m in Sources */,
+				849D4DDE1CFC390500436BDA /* GLReachability.m in Sources */,
 				849D4A1C1CF8555D00436BDA /* main.m in Sources */,
 				989C7E0E1CF9D9A700B1D679 /* Toast.m in Sources */,
+				849D4DC21CFBED2B00436BDA /* GetBinAsyncTask.m in Sources */,
 				989C7E271CFB4AB800B1D679 /* AppConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,7 +543,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/fox/Documents/fucker/fucker/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/shuaizhihao/IdeaProjects/fucker/fucker/PrefixHeader.pch;
 				INFOPLIST_FILE = fucker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -445,7 +561,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/fox/Documents/fucker/fucker/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/shuaizhihao/IdeaProjects/fucker/fucker/PrefixHeader.pch;
 				INFOPLIST_FILE = fucker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -477,6 +593,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		849D4DE51CFC426000436BDA /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				849D4DE61CFC426000436BDA /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 849D4DE61CFC426000436BDA /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 849D4A0F1CF8555D00436BDA /* Project object */;
 }

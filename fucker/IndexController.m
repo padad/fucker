@@ -89,7 +89,7 @@
     ms.messageValueBlock = ^(NSString *message){
         //[Toast showTips:self.view :message];
         
-        [HRApi login:@"ss" : @"sd"];
+        [HRApi login: self.view : @"18621586823" : @"a123456"];
         
     };
     
