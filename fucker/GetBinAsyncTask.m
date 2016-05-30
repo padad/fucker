@@ -46,7 +46,7 @@ static double REQUEST_TIME_OUT = 15;
     /* API版本号 */
     [requestSerializer setValue:API_VERSION forHTTPHeaderField:@"X-API-VER"];
     
-    [requestSerializer setValue:@"application/json;text/html;charset=UTF-8" forHTTPHeaderField:@"Content-Type"];
+//    [requestSerializer setValue:@"application/json;text/html;charset=UTF-8" forHTTPHeaderField:@"Content-Type"];
     
     
 }
@@ -67,6 +67,21 @@ static double REQUEST_TIME_OUT = 15;
         /**** SSL Pinning ****/
     });
     return securityPolicy;
+}
+
+-(NSString*)DataTOjsonString:(id)object
+{
+    NSString *jsonString = nil;
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:object
+                                                       options:NSJSONWritingPrettyPrinted // Pass 0 if you don't care about the readability of the generated string
+                                                         error:&error];
+    if (! jsonData) {
+        NSLog(@"Got an error: %@", error);
+    } else {
+        jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    }
+    return jsonString;
 }
 
 
@@ -90,7 +105,7 @@ static double REQUEST_TIME_OUT = 15;
     
     // 设置Https请求
     [manager setSecurityPolicy:[GetBinAsyncTask shareSecurityPolicy]];
-    
+    //@"http://www.weather.com.cn/data/sk/101010100.html"
     [manager POST:self.url parameters:self.params
      
          progress:^(NSProgress * _Nonnull downloadProgress) {
@@ -101,7 +116,14 @@ static double REQUEST_TIME_OUT = 15;
              
              NSLog(@"这里打印请求成功要做的事");
              
-             NSDictionary *dict = [[NSDictionary alloc] initWithDictionary:responseObject];
+             
+             
+             
+             
+//             WeatherResponseModel *dict = [[WeatherResponseModel alloc] initWithDictionary:responseObject error:nil];
+//             
+//             NSString *g = dict.weatherinfo.city;
+//             NSLog(g);
              
          }
      

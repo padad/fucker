@@ -14,7 +14,7 @@
 
 
 
-#define ISDEBUG YES
+#define ISDEBUG NO
 
 #define SYSTEM_LOADING 0
 #define PAGE_LOADING 1
