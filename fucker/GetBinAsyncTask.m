@@ -27,9 +27,9 @@ static double REQUEST_TIME_OUT = 15;
         // 申明请求的数据是json类型
         httpManager.requestSerializer=[AFJSONRequestSerializer serializer];
         
-        httpManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json;text/html;charset=UTF-8", nil];
+//        httpManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json;text/html;charset=UTF-8", nil];
         
-//        httpManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json;charset=UTF-8",@"text/json", @"text/plain", @"text/html", nil];
+        httpManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/json", @"text/plain", @"text/javascript", @"text/html", nil];
     });
     [self setRequestSerialize:httpManager.requestSerializer];
     return httpManager;
@@ -51,6 +51,24 @@ static double REQUEST_TIME_OUT = 15;
     
 }
 
+/**
+ *  设置Https请求
+ */
++ (AFSecurityPolicy*)shareSecurityPolicy {
+    static AFSecurityPolicy *securityPolicy;
+    static dispatch_once_t policyOnceToken;
+    dispatch_once(&policyOnceToken, ^{
+        /**** SSL Pinning ****/
+        securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
+        [securityPolicy setAllowInvalidCertificates:NO];
+#ifdef ONLINE_DEV       //如果不是生产环境不用https
+        [securityPolicy setAllowInvalidCertificates:YES];
+#endif
+        /**** SSL Pinning ****/
+    });
+    return securityPolicy;
+}
+
 
 - (id)initWith:(UIView *)mthis url:(NSString *)url params:(NSDictionary *)params loadtype:(int)loadtype cacheTime:(double)cacheTime{
     
@@ -69,6 +87,9 @@ static double REQUEST_TIME_OUT = 15;
     [self onPreExecute];
     
     AFHTTPSessionManager *manager = [GetBinAsyncTask shareHttpManager];
+    
+    // 设置Https请求
+    [manager setSecurityPolicy:[GetBinAsyncTask shareSecurityPolicy]];
     
     [manager POST:self.url parameters:self.params
      
