@@ -114,31 +114,31 @@ static double REQUEST_TIME_OUT = 15;
          progress:^(NSProgress * _Nonnull downloadProgress) {
         
          }
-          //success:self.success
+          success:self.success
      
-         success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-             
-             NSLog(@"这里打印请求成功要做的事");
-             
-             self.success(task,responseObject);
-             
-             
-             
-//             WeatherResponseModel *dict = [[WeatherResponseModel alloc] initWithDictionary:responseObject error:nil];
+//         success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
 //             
-//             NSString *g = dict.weatherinfo.city;
-//             NSLog(g);
-             
-         }
-         // failure:self.failure
+//             NSLog(@"这里打印请求成功要做的事");
+//             
+//             self.success(task,responseObject);
+//             
+//             
+//             
+////             WeatherResponseModel *dict = [[WeatherResponseModel alloc] initWithDictionary:responseObject error:nil];
+////             
+////             NSString *g = dict.weatherinfo.city;
+////             NSLog(g);
+//             
+//         }
+          failure:self.failure
      
-         failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull   error) {
-             
-             NSLog(@"%@",error);  //这里打印错误信息
-             self.failure(task,error);
-             
-         }];
-    
+//         failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull   error) {
+//             
+//             NSLog(@"%@",error);  //这里打印错误信息
+//             self.failure(task,error);
+//             
+//         }];
+     ];
 }
 
 - (void) onPostExecute{

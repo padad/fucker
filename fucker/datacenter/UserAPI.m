@@ -12,8 +12,19 @@
 @implementation UserAPI
 
 - (void) userLogin:(UIView *)mthis userName:(NSString *)userName pass:(NSString *)pass loadtype:(LoadingType)loadtype success:(void (^)(NSURLSessionDataTask *, id))success failure:(void (^)(NSURLSessionDataTask *, NSError *))failure{
-    
-    [HRApi login: mthis userName:userName pass:pass loadtype:loadtype success:success failure:failure];
+    //处理通用数据后，扔给前端处理页面逻辑
+    [HRApi login: mthis userName:userName pass:pass loadtype:loadtype
+     
+         success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject){
+             success(task,responseObject);
+             
+         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull   error) {
+             failure(task,error);
+         }
+     
+     
+     
+     ];
     
 }
 
