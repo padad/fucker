@@ -131,7 +131,7 @@ static double REQUEST_TIME_OUT = 15;
          progress:^(NSProgress * _Nonnull downloadProgress) {
         
              //self.toast.progressValue(downloadProgress);
-             self.toast.progressFloat = 1;
+             //self.toast.progressNum = downloadProgress.fractionCompleted;
              
              
          }
@@ -187,11 +187,12 @@ static double REQUEST_TIME_OUT = 15;
     switch (self.loadtype) {
         case SYSTEM_LOADING:
             
-            self.toast = [Toast showProgressDialog:self.mthis];
+            self.toast = [[Toast alloc] init];
+            [self.toast showProgressDialog:self.mthis];
             
             break;
         case PAGE_LOADING:
-            [Toast showProgressDialog: self.mthis];
+            //[Toast showProgressDialog: self.mthis];
             break;
         case NO_LOADING:
             break;

@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "MBProgressHUD.h"
-#import "Toast.h"
 
 @interface ViewController ()
 
@@ -46,7 +45,7 @@
 - (IBAction)buttonClick:(id)sender {
     
     //[Utils showTips:self.view :@"我靠"];
-    [Toast showProgressDialog:self.view];
+    //[Toast showProgressDialog:self.view];
     
 }
 @end

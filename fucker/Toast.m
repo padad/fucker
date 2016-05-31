@@ -8,10 +8,10 @@
 
 #import "Toast.h"
 
-static float progressFloat;
+
 @implementation Toast
 
-+(void)showTips:(UIView *)mthis :(NSString *)msg{
+-(void)showTips:(UIView *)mthis :(NSString *)msg{
     
 //    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"tips" message:msg delegate:mthis cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
 //    
@@ -40,7 +40,7 @@ static float progressFloat;
 
 
 
-+ (id) showProgressDialog:(UIView *)mthis
+- (void) showProgressDialog:(UIView *)mthis
 {
     MBProgressHUD *HUD = [[MBProgressHUD alloc] initWithView:mthis];
     [mthis addSubview:HUD];
@@ -54,10 +54,10 @@ static float progressFloat;
     
     [HUD showAnimated:YES whileExecutingBlock:^{
         
-        float progress = 0.0f;
+       float progress = 0.0f;
         while (progress < 1.0f) {
             progress += 0.01f;
-            HUD.progress = progressFloat;
+            HUD.progress = progress;
             usleep(50000);
         }
     }completionBlock:^{
@@ -66,7 +66,7 @@ static float progressFloat;
         
     }];
     
-    return self;
+    
     
 }
 

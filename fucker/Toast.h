@@ -9,16 +9,17 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+//float progressNums;
 typedef void (^ProgressValue)(NSProgress *);
 
 @interface Toast : NSObject
 @property (nonatomic,copy)ProgressValue progressValue;
+//@property (nonatomic,assign) float progressNum;
 
 
-+ (void) showTips : (UIView *) mthis : (NSString *)msg;
+- (void) showTips : (UIView *) mthis : (NSString *)msg;
 
-+ (id) showProgressDialog: (UIView *)mthis;
-
+- (void) showProgressDialog: (UIView *)mthis;
 
 
 
