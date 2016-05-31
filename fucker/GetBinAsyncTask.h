@@ -22,6 +22,8 @@ typedef void(^failure) (NSURLSessionDataTask *, NSError *);
 @property (nonatomic,assign) double cacheTime;
 @property (nonatomic,copy)success success;
 @property (nonatomic,copy)failure failure;
+@property (nonatomic,copy)Toast *toast;
+
 
 
 -(id)initWith:(UIView *)mthis

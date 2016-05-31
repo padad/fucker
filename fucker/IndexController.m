@@ -11,6 +11,7 @@
 #import "UrlUtil.h"
 #import "HRApi.h"
 #import "UserAPI.h"
+#import "LoginResponseModel.h"
 
 @interface IndexController ()
 
@@ -101,7 +102,7 @@
                     
                     
                     
-                    //             WeatherResponseModel *dict = [[WeatherResponseModel alloc] initWithDictionary:responseObject error:nil];
+                    LoginResponseModel *dict = [[LoginResponseModel alloc] initWithString:responseObject error:nil];
                     //
                     //             NSString *g = dict.weatherinfo.city;
                     //             NSLog(g);
@@ -109,6 +110,8 @@
                 }
          
                 failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull   error) {
+                    
+                    
                     
                     NSLog(@"%@",error);  //这里打印错误信息
                     

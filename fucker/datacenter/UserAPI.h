@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "HRApi.h"
+#import "BaseAPI.h"
 
-@interface UserAPI : NSObject
+@interface UserAPI : BaseAPI
 
 //用户登录
 - (void) userLogin : (UIView *)mthis

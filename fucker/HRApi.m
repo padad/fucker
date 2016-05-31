@@ -22,7 +22,7 @@
     [params setValue:userName forKey:@"account"];
     [params setValue:pass forKey:@"password"];
     
-    GetBinAsyncTask *gt = [[GetBinAsyncTask alloc] initWith:mthis url:url params:params loadtype:loadtype cacheTime:0 success:success failure:failure];
+    GetBinAsyncTask *gt = [[GetBinAsyncTask alloc] initWith:mthis url:url params:params loadtype:loadtype cacheTime:300 success:success failure:failure];
     [gt execute];
     
 }

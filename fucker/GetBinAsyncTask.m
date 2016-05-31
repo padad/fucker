@@ -12,6 +12,9 @@ static double REQUEST_TIME_OUT = 15;
 #import "GetBinAsyncTask.h"
 #import "UserData.h"
 #import "HDevice.h"
+#import "CacheUtil.h"
+#import "StringUtil.h"
+#import "Toast.h"
 
 @implementation GetBinAsyncTask
 
@@ -104,6 +107,20 @@ static double REQUEST_TIME_OUT = 15;
     
     [self onPreExecute];
     
+    
+    //从缓存获取数据
+    if (self.cacheTime > 0) {
+        NSString *json = [CacheUtil getCacheBin:self.url];
+        
+        if (![StringUtil emptyOrNull:json]) {
+            
+            self.success(nil,json);
+            return;
+        }
+        
+    }
+    
+    //如果没有缓存
     AFHTTPSessionManager *manager = [GetBinAsyncTask shareHttpManager];
     
     // 设置Https请求
@@ -113,32 +130,49 @@ static double REQUEST_TIME_OUT = 15;
      
          progress:^(NSProgress * _Nonnull downloadProgress) {
         
+             //self.toast.progressValue(downloadProgress);
+             self.toast.progressFloat = 1;
+             
+             
          }
-          success:self.success
+         //success:self.success
      
-//         success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+         success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+             
+             NSLog(@"这里打印请求成功要做的事");
+             
+             if (self.cacheTime > 0) {
+                 [self saveCache: responseObject url:self.url];
+             }
+             
+             self.success(task,responseObject);
+             
+             
+             
+//             WeatherResponseModel *dict = [[WeatherResponseModel alloc] initWithDictionary:responseObject error:nil];
 //             
-//             NSLog(@"这里打印请求成功要做的事");
-//             
-//             self.success(task,responseObject);
-//             
-//             
-//             
-////             WeatherResponseModel *dict = [[WeatherResponseModel alloc] initWithDictionary:responseObject error:nil];
-////             
-////             NSString *g = dict.weatherinfo.city;
-////             NSLog(g);
-//             
-//         }
-          failure:self.failure
+//             NSString *g = dict.weatherinfo.city;
+//             NSLog(g);
+             
+         }
+          //failure:self.failure
      
-//         failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull   error) {
-//             
-//             NSLog(@"%@",error);  //这里打印错误信息
-//             self.failure(task,error);
-//             
-//         }];
-     ];
+         failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull   error) {
+             
+             
+             NSLog(@"%@",error);  //这里打印错误信息
+             self.failure(task,error);
+             
+         }];
+    
+}
+
+-(void) saveCache : (id) resp url:(NSString *)url{
+    
+    
+    [CacheUtil saveCacheBin:url cacheTime:self.cacheTime value:resp];
+    
+    
 }
 
 - (void) onPostExecute{
@@ -153,7 +187,7 @@ static double REQUEST_TIME_OUT = 15;
     switch (self.loadtype) {
         case SYSTEM_LOADING:
             
-            [Toast showProgressDialog: self.mthis];
+            self.toast = [Toast showProgressDialog:self.mthis];
             
             break;
         case PAGE_LOADING:
@@ -168,6 +202,11 @@ static double REQUEST_TIME_OUT = 15;
     
     
     
+    
+    
+    
 }
+
+
 
 @end
