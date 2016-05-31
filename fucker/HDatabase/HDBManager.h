@@ -13,6 +13,8 @@
 
 //查询所对应类名的名字
 +(NSArray *)selectDatasWithModelName:(NSString *)name;
+//查询by条件
++(NSArray *)selectDatasWithModelNameByKey:(NSString *)name key:(id)key;
 //插入数据 name为对应的数据类名   dic为需要插入数据
 +(BOOL)insertDataWithModelName:(NSString *)name andDic:(NSDictionary *)dic;
 //更新对应类名的对应的属性的值； 针对一个数据表中只有一条数据使用

@@ -26,6 +26,32 @@
     return fetchedObjects;
 }
 
++(NSArray *)selectDatasWithModelNameByKey:(NSString *)name key:(id)key{
+    NSManagedObjectContext *context=[HCoreData managedObjectContext];
+    NSFetchRequest *fetchRequest=[[NSFetchRequest alloc] init];
+    
+    // 3. 条件查询，通过谓词来实现的
+    //    fetchRequest.predicate = [NSPredicate predicateWithFormat:@"age < 60 && name LIKE '*五'"];
+    // 在谓词中CONTAINS类似于数据库的 LIKE '%王%'
+    //    fetchRequest.predicate = [NSPredicate predicateWithFormat:@"phoneNo CONTAINS '1'"];
+    // 如果要通过key path查询字段，需要使用%K
+    //fetchRequest.predicate = [NSPredicate predicateWithFormat:@"key", key];
+    
+    NSPredicate *predicate= [NSPredicate predicateWithFormat:@"key = %@ ",key];
+    
+    NSEntityDescription *entity=[NSEntityDescription entityForName:name inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    [fetchRequest setPredicate:predicate];
+    
+    NSError *error;
+    NSArray *fetchedObjects=[context executeFetchRequest:fetchRequest error:&error];
+    if (error) {
+        NSLog(@"\n数据库查询错误:\n%@", [error localizedDescription]);
+    }
+    [HDBManager commit];
+    return fetchedObjects;
+}
+
 +(BOOL)insertDataWithModelName:(NSString *)name andDic:(NSDictionary *)dic{
     NSManagedObject *info=[HDBManager addDataWithName:name];
     NSArray *keys=[dic allKeys];

@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15B42" minimumToolsVersion="Xcode 7.0">
+    <entity name="CacheBin" syncable="YES">
+        <attribute name="key" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="saved_time" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="validity_duration" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="UserModel" syncable="YES">
         <attribute name="account" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
@@ -23,5 +30,6 @@
     </entity>
     <elements>
         <element name="UserModel" positionX="-63" positionY="-18" width="128" height="328"/>
+        <element name="CacheBin" positionX="-54" positionY="135" width="128" height="120"/>
     </elements>
 </model>

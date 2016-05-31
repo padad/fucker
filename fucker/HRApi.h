@@ -8,8 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum : NSInteger{
+    System_Loading = 0,
+    Page_Loading,
+    No_Loading
+    
+}LoadingType;
+
 @interface HRApi : NSObject
 
-+ (void) login : (UIView *)mthis : (NSString *)userName : (NSString *)pass;
++ (void) login : (UIView *)mthis
+       userName:(NSString *)userName
+           pass:(NSString *)pass
+       loadtype:(LoadingType)loadtype
+        success:(void (^)(NSURLSessionDataTask *, id))success
+        failure:(void (^)(NSURLSessionDataTask *, NSError *))failure;
 
 @end

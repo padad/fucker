@@ -8,11 +8,12 @@
 
 #import "HRApi.h"
 #import "UrlUtil.h"
-#import "NetUtil.h"
+#import "GetBinAsyncTask.h"
 
 @implementation HRApi
 
-+ (void) login: (UIView *)mthis :(NSString *)userName :(NSString *)pass{
++(void)login:(UIView *)mthis userName:(NSString *)userName pass:(NSString *)pass loadtype:(LoadingType)loadtype success:(void (^)(NSURLSessionDataTask *, id))success failure:(void (^)(NSURLSessionDataTask *, NSError *))failure{
+    
     
     NSString *url = [UrlUtil getServiceUrl:toLogin];
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
@@ -21,11 +22,8 @@
     [params setValue:userName forKey:@"account"];
     [params setValue:pass forKey:@"password"];
     
-    [NetUtil getBin:mthis :url :params :SYSTEM_LOADING :0];
-    
-    
-    
-    
+    GetBinAsyncTask *gt = [[GetBinAsyncTask alloc] initWith:mthis url:url params:params loadtype:loadtype cacheTime:300 success:success failure:failure];
+    [gt execute];
     
 }
 

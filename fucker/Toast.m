@@ -8,9 +8,10 @@
 
 #import "Toast.h"
 
+
 @implementation Toast
 
-+(void)showTips:(UIView *)mthis :(NSString *)msg{
+-(void)showTips:(UIView *)mthis :(NSString *)msg{
     
 //    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"tips" message:msg delegate:mthis cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
 //    
@@ -36,10 +37,14 @@
     
 }
 
-+ (void) showProgressDialog:(UIView *)mthis{
-    
+
+
+
+- (void) showProgressDialog:(UIView *)mthis
+{
     MBProgressHUD *HUD = [[MBProgressHUD alloc] initWithView:mthis];
     [mthis addSubview:HUD];
+    
     HUD.labelText = @"正在加载";
     HUD.mode = MBProgressHUDModeAnnularDeterminate;
     //HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Checkmark"]];
@@ -48,7 +53,8 @@
     
     
     [HUD showAnimated:YES whileExecutingBlock:^{
-        float progress = 0.0f;
+        
+       float progress = 0.0f;
         while (progress < 1.0f) {
             progress += 0.01f;
             HUD.progress = progress;
@@ -59,6 +65,8 @@
         
         
     }];
+    
+    
     
 }
 
