@@ -84,8 +84,7 @@ static double REQUEST_TIME_OUT = 15;
     return jsonString;
 }
 
-
-- (id)initWith:(UIView *)mthis url:(NSString *)url params:(NSDictionary *)params loadtype:(int)loadtype cacheTime:(double)cacheTime{
+- (id)initWith:(UIView *)mthis url:(NSString *)url params:(NSDictionary *)params loadtype:(int)loadtype cacheTime:(double)cacheTime success:(void (^)(NSURLSessionDataTask *, id))success failure:(void (^)(NSURLSessionDataTask *, NSError *))failure{
     
     self.mthis = mthis;
     self.url = url;
@@ -93,8 +92,12 @@ static double REQUEST_TIME_OUT = 15;
     self.params = params;
     self.loadtype = loadtype;
     self.cacheTime = cacheTime;
+    self.success = success;
+    self.failure = failure;
+    
     
     return self;
+    
 }
 
 - (void) execute{
@@ -111,12 +114,13 @@ static double REQUEST_TIME_OUT = 15;
          progress:^(NSProgress * _Nonnull downloadProgress) {
         
          }
+          //success:self.success
      
          success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
              
              NSLog(@"这里打印请求成功要做的事");
              
-             
+             self.success(task,responseObject);
              
              
              
@@ -126,10 +130,12 @@ static double REQUEST_TIME_OUT = 15;
 //             NSLog(g);
              
          }
+         // failure:self.failure
      
          failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull   error) {
              
              NSLog(@"%@",error);  //这里打印错误信息
+             self.failure(task,error);
              
          }];
     

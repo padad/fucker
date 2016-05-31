@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <AFNetworking/AFNetworking.h>
 
+typedef void(^success) (NSURLSessionDataTask *, id);
+typedef void(^failure) (NSURLSessionDataTask *, NSError *);
+
 @interface GetBinAsyncTask : NSObject
 
 @property (nonatomic,copy) NSString *url;
@@ -17,8 +20,17 @@
 @property (nonatomic,assign)int loadtype;
 @property (nonatomic,copy) NSDictionary *params;
 @property (nonatomic,assign) double cacheTime;
+@property (nonatomic,copy)success success;
+@property (nonatomic,copy)failure failure;
 
--(id)initWith:(UIView *)mthis url:(NSString *)url params:(NSDictionary *)params loadtype:(int)loadtype cacheTime:(double) cacheTime;
+
+-(id)initWith:(UIView *)mthis
+          url:(NSString *)url
+       params:(NSDictionary *)params
+     loadtype:(int)loadtype
+    cacheTime:(double) cacheTime
+      success:(void (^)(NSURLSessionDataTask *, id))success
+      failure:(void (^)(NSURLSessionDataTask *, NSError *))failure;
 
 
 

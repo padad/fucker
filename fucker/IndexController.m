@@ -10,6 +10,7 @@
 #import "MessageTableViewController.h"
 #import "UrlUtil.h"
 #import "HRApi.h"
+#import "UserAPI.h"
 
 @interface IndexController ()
 
@@ -89,7 +90,30 @@
     ms.messageValueBlock = ^(NSString *message){
         //[Toast showTips:self.view :message];
         
-        [HRApi login: self.view : @"18621586823" : @"a123456"];
+        //[HRApi login: self.view : @"18621586823" : @"a123456"];
+        UserAPI *user = [[UserAPI alloc] init];
+        [user userLogin:self.view userName:@"18621586823" pass:@"a123456" loadtype:SYSTEM_LOADING
+                success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                    
+                    NSLog(@"这里打印请求成功要做的事");
+                    
+                    
+                    
+                    
+                    
+                    //             WeatherResponseModel *dict = [[WeatherResponseModel alloc] initWithDictionary:responseObject error:nil];
+                    //
+                    //             NSString *g = dict.weatherinfo.city;
+                    //             NSLog(g);
+                    
+                }
+         
+                failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull   error) {
+                    
+                    NSLog(@"%@",error);  //这里打印错误信息
+                    
+                }];
+        
         
     };
     
